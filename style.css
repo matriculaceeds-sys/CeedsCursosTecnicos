@@ -34,7 +34,7 @@ body {
     min-width: 0;
     overflow-x: hidden;
     font-family: "Inter", Arial, sans-serif;
-    background: #e9e9e9;
+    background: #ffffffd8;
     color: var(--black);
     line-height: 1.5;
 }
@@ -75,7 +75,7 @@ main {
     max-width: 1200px;
     min-height: 100vh;
     margin: 0 auto;
-    background: #f5e2d0d8;
+    background: #ffffffd8;
     overflow: hidden;
 }
 
@@ -83,7 +83,7 @@ main {
     width: 100%;
     min-height: 100vh;
     margin: 0;
-    background: #f5e2d0d8;
+    background: #ffffffd8;
 }
 
 .content {
