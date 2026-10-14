@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Curso de Atendimento Pré-Hospitalar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --yellow: #F2B01E;
+            --black: #161616;
+            --white: #fff;
+            --gray-50: #FAF9F6;
+            --gray-100: #F3F2EE;
+            --gray-300: #DDDAD2;
+            --gray-600: #555;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: Inter, system-ui, sans-serif;
+            color: var(--black);
+            background: var(--white);
+            line-height: 1.65;
+            font-size: 16px;
+            overflow-wrap: break-word
+        }
+
+        .wrap {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 0 24px
+        }
+
+        section {
+            padding: 72px 0
+        }
+
+        h1,
+        h2,
+        h3 {
+            line-height: 1.2
+        }
+
+        h1 {
+            font-size: clamp(32px, 5.5vw, 52px);
+            font-weight: 800;
+            letter-spacing: -.02em
+        }
+
+        h2 {
+            font-size: clamp(25px, 3.6vw, 34px);
+            font-weight: 800;
+            letter-spacing: -.01em;
+            margin-bottom: 14px
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 700
+        }
+
+        .lead {
+            font-size: 18px;
+            color: var(--gray-600);
+            max-width: 60ch
+        }
+
+
+        .icon svg {
+            width: 24px;
+            /* Um pouco menor no celular */
+            height: 24px;
+            margin: 0 0 5px 20px;
+            /* Margem esquerda reduzida para telas pequenas */
+            fill: none;
+            stroke: #0f0f0f;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* Configuração para Desktop (telas maiores que 768px) */
+        @media (min-width: 768px) {
+            .icon svg {
+                width: 32px;
+                height: 32px;
+                margin: 0 0 2px 100px;
+                /* Retorna ao seu design original */
+            }
+        }
+
+        .kicker {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            padding-bottom: 4px;
+            border-bottom: 3px solid var(--yellow)
+        }
+
+        .resume p{
+           text-align: justify;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 52px;
+            padding: 0 28px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 16px;
+            text-decoration: none;
+            background: var(--yellow);
+            color: var(--black);
+            transition: .2s ease
+        }
+
+        .btn:hover {
+            transform: translateY(-2px)
+        }
+
+        .btn:focus-visible {
+            outline: 3px solid var(--black);
+            outline-offset: 3px
+        }
+
+        .btn.dark {
+            background: var(--black);
+            color: var(--white)
+        }
+
+        .btn.dark:focus-visible {
+            outline-color: var(--yellow)
+        }
+
+        /* HERO: texto à esquerda, painel à direita */
+        .hero {
+            padding: 72px 0 64px;
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--gray-300)
+        }
+
+        .hero .wrap {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 48px;
+            align-items: center
+        }
+
+        .hero h1 {
+            margin-bottom: 20px
+        }
+
+        .hero .lead {
+            margin-bottom: 32px
+        }
+
+        .panel {
+            background: var(--white);
+            border: 1px solid var(--gray-300);
+            border-radius: 18px;
+            padding: 28px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, .06)
+        }
+
+        .panel h3 {
+            margin-bottom: 18px;
+            font-size: 16px
+        }
+
+        .panel ul {
+            list-style: none;
+            display: grid;
+            gap: 14px
+        }
+
+        .panel li {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 15px;
+            font-weight: 600
+        }
+
+        .panel li i {
+            flex: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            background: var(--yellow);
+            display: grid;
+            place-items: center;
+            font-style: normal;
+            font-size: 13px;
+            font-weight: 800
+        }
+
+        /* DADOS RÁPIDOS */
+        .facts {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            background: var(--black);
+            color: var(--white)
+        }
+
+        .facts div {
+            padding: 24px;
+            border-right: 1px solid #333
+        }
+
+        .facts div:last-child {
+            border-right: none
+        }
+
+        .facts small {
+            display: block;
+            font-size: 13px;
+            color: #aaa;
+            margin-bottom: 4px
+        }
+
+        .facts b {
+            font-size: 17px
+        }
+
+        /* SOBRE */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: start
+        }
+
+        .about p+p {
+            margin-top: 16px
+        }
+
+        .about p {
+            color: var(--gray-600)
+        }
+
+        /* MÓDULOS */
+        .gray {
+            background: var(--gray-50);
+            border-top: 1px solid var(--gray-300);
+            border-bottom: 1px solid var(--gray-300)
+        }
+
+        .sec-head {
+            margin-bottom: 40px;
+            max-width: 640px
+        }
+
+        .modules {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px
+        }
+
+        .module {
+            background: var(--white);
+            border: 1px solid var(--gray-300);
+            border-radius: 16px;
+            padding: 28px 24px
+        }
+
+        .module .n {
+            display: block;
+            font-size: 14px;
+            font-weight: 800;
+            margin-bottom: 14px;
+            color: var(--black)
+        }
+
+        .module .n::after {
+            content: "";
+            display: block;
+            width: 32px;
+            height: 4px;
+            background: var(--yellow);
+            margin-top: 8px;
+            border-radius: 2px
+        }
+
+        .module h3 {
+            margin-bottom: 10px
+        }
+
+        .module p {
+            font-size: 15px;
+            color: var(--gray-600)
+        }
+
+        /* PERFIL */
+        .profile {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px
+        }
+
+        .pcard {
+            border-left: 5px solid var(--yellow);
+            background: var(--gray-50);
+            padding: 24px 26px;
+            border-radius: 0 14px 14px 0
+        }
+
+        .pcard h3 {
+            margin-bottom: 8px
+        }
+
+        .pcard p {
+            font-size: 15px;
+            color: var(--gray-600)
+        }
+
+        /* MERCADO */
+        .market {
+            background: var(--yellow)
+        }
+
+        .market .wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: center
+        }
+
+        .market p {
+            font-size: 17px
+        }
+
+        .areas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px
+        }
+
+        .areas span {
+            background: var(--white);
+            border-radius: 50px;
+            padding: 10px 18px;
+            font-weight: 600;
+            font-size: 15px
+        }
+
+        /* FAQ */
+        .faq {
+            max-width: 760px
+        }
+
+        details {
+            border-bottom: 1px solid var(--gray-300);
+            padding: 20px 0
+        }
+
+        summary {
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 17px
+        }
+
+        details p {
+            margin-top: 10px;
+            color: var(--gray-600)
+        }
+
+        /* CTA */
+        .cta {
+            background: var(--black);
+            color: var(--white);
+            text-align: center
+        }
+
+        .cta h2 {
+            max-width: 20ch;
+            margin: 0 auto 14px
+        }
+
+        .cta p {
+            color: #ccc;
+            max-width: 48ch;
+            margin: 0 auto 32px
+        }
+
+        footer {
+            padding: 28px 0;
+            font-size: 14px;
+            color: var(--gray-600);
+            text-align: center
+        }
+
+        @media(max-width:860px) {
+            section {
+                padding: 56px 0
+            }
+
+            .hero .wrap,
+            .about,
+            .market .wrap {
+                grid-template-columns: 1fr;
+                gap: 32px
+            }
+
+            .modules,
+            .profile {
+                grid-template-columns: 1fr
+            }
+
+            .facts {
+                grid-template-columns: 1fr
+            }
+
+            .facts div {
+                border-right: none;
+                border-bottom: 1px solid #333
+            }
+
+            .facts div:last-child {
+                border-bottom: none
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            html {
+                scroll-behavior: auto
+            }
+
+            .btn {
+                transition: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+        <a href="../index.html#cursos" class="icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M14 5l-7 7 7 7"></path>
+                </g>
+            </svg>
+        </a>
+        <div class="wrap">
+
+            <div>
+                <span class="kicker">Curso profissionalizante</span>
+                <h1>Atendimento Pré-Hospitalar - APH.</h1>
+                <p class="lead">No APH, cada segundo importa. Prepare-se para agir com conhecimento, segurança e responsabilidade.</p>
+                <a class="btn dark" href="https://wa.me/5585988330211">Quero me inscrever</a>
+            </div>
+            <aside class="panel" aria-label="Exemplo da rotina de trabalho">
+                <h3>SUA ROTINA PROFISSIONAL:</h3>
+                <ul>
+                    <li><i>✓</i>Atendimento em situações de emergência</li>
+                    <li><i>✓</i>Avaliação inicial da vítima</li>
+                    <li><i>✓</i>Suporte Básico de Vida</li>
+                    <li><i>✓</i>Primeiros cuidados e traumas</li>
+                    <li><i>✓</i>Segurança e trabalho em equipe</li>
+                </ul>
+            </aside>
+        </div>
+    </header>
+
+    <div class="facts">
+        <div><small>Duração</small><b>4 meses 200h</b></div>
+        <div><small>Modalidade</small><b>Presencial</b></div>
+        <div><small>Turnos</small><b>Noite 18h às 21h  ou aos Finais de Semana 8h às 16h</b></div>
+    </div>
+
+    <section>
+        <div class="wrap about">
+            <div>
+                <span class="kicker">Sobre o curso</span>
+                <h2>Desenvolva conhecimentos sobre segurança da cena, organização do atendimento e atuação integrada durante uma ocorrência.</h2>
+            </div>
+            <div class="resume">
+                <p>O curso de Atendimento Pré-Hospitalar (APH) prepara o aluno para compreender e aplicar conhecimentos fundamentais no atendimento inicial a vítimas em situações de urgência e emergência, com foco em segurança, avaliação da vítima, primeiros cuidados e suporte até a chegada ou encaminhamento para atendimento especializado.</p>
+            </div>
+        </div>
+    </section>
+
+   
+    <section>
+        <div class="wrap">
+            <div class="sec-head">
+                <span class="kicker">Perfil</span>
+                <h2>Para quem é este curso?</h2>
+            </div>
+            <div class="profile">
+                <div class="pcard">
+                    <h3>Quem quer atuar na área da saúde:</h3>
+                    <p>Você que deseja desenvolver conhecimentos para lidar com situações de urgência e emergência.</p>
+                </div>
+                <div class="pcard">
+                    <h3>Profissionais e estudantes da saúde:</h3>
+                    <p>Você que deseja aprimorar seus conhecimentos e desenvolver mais segurança no atendimento inicial.</p>
+                </div>
+                <div class="pcard">
+                    <h3>Quem busca uma qualificação prática:</h3>
+                    <p>Quem densenvolve técnicas importantes para agir de forma rápida, segura e organizada diante de uma emergência.</p>
+                </div>
+                <div class="pcard">
+                    <h3>Quem se identifica com atendimento de emergência:</h3>
+                    <p>Você quer uma formação prática para se preparar melhor para o mercado de trabalho.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="market">
+        <div class="wrap">
+            <div>
+                <span class="kicker">Mercado de trabalho</span>
+                <h2>Onde você pode atuar:</h2>
+                <p>Prepare-se para fazer parte da área da saúde e conquistar novas oportunidades profissionais.</p>
+            </div>
+            <div class="areas">
+                <span>Serviço de atendimento Pré-Hospitalar e emergência</span><span>Unidade de Pronto Atendimento</span><span>Clínicas e serviços de saúde</span><span>Eventos e atividades que necessitam de suporte em primeiros cuidados</span><span>Hospitais</span><span>Unidades de saúde</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap faq">
+            <div class="sec-head">
+                <span class="kicker">Dúvidas</span>
+                <h2>Perguntas frequentes</h2>
+            </div>
+            <details>
+                <summary>Preciso ter experiência anterior?</summary>
+                <p>Não, o curso irá lhe qualificar para obter conhecimentos e desenvolver na prática a sua experiência.</p>
+            </details>
+
+            <details>
+                <summary>O curso tem prática?</summary>
+                <p>Sim. As aulas são realizadas em laboratório com simulações práticas.</p>
+            </details>
+            <details>
+                <summary>Após a conclusão, como recebo o certificado?</summary>
+                <p>O certificado será digital e enviado ao email após a conclusão do curso.</p>
+            </details>
+        </div>
+    </section>
+
+    <section class="cta" id="inscricao">
+        <div class="wrap">
+            <h2>Comece sua carreira na área da saúde.</h2>
+            <p>Fale com a gente, tire suas dúvidas e garanta sua vaga na próxima turma.</p>
+            <a class="btn" href="https://wa.me/5585988330211">Falar no WhatsApp</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">CEEDS CURSOS TÉCNICOS · (85) 98833-0211 · @ceedsmaracanau · Rua 5, 128 - Jereissati I - Maracanaú · 61.900-340 </div>
+    </footer>
+
+</body>
+
+</html>

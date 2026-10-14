@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pós-técnico em Enfermagem do Trabalho</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --yellow: #F2B01E;
+            --black: #161616;
+            --white: #fff;
+            --gray-100: #F3F2EE;
+            --gray-600: #555;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font-family: Inter, system-ui, sans-serif;
+            color: var(--black);
+            background: var(--white);
+            line-height: 1.6
+        }
+
+        .icon svg {
+            width: 24px;
+            /* Um pouco menor no celular */
+            height: 24px;
+            margin: 0 0 5px 20px;
+            /* Margem esquerda reduzida para telas pequenas */
+            fill: none;
+            stroke: #fffefe;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* Configuração para Desktop (telas maiores que 768px) */
+        @media (min-width: 768px) {
+            .icon svg {
+                width: 32px;
+                height: 32px;
+                margin: 0 0 2px 100px;
+                /* Retorna ao seu design original */
+            }
+        }
+
+        .wrap {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px
+        }
+
+        .wrap p{
+            text-align: justify;
+        }
+
+        
+        #atuacao{
+            padding:20px;
+            text-align: justify;
+        }
+
+        section {
+            padding: 56px 0
+        }
+
+        h1 {
+            font-size: clamp(30px, 6vw, 50px);
+            line-height: 1.1;
+            font-weight: 800;
+            max-width: 18ch
+        }
+
+        h2 {
+            font-size: clamp(24px, 4vw, 32px);
+            line-height: 1.2;
+            font-weight: 800;
+            margin-bottom: 24px
+        }
+
+        p {
+            max-width: 60ch
+        }
+
+        .hero {
+            background: var(--black);
+            color: var(--white);
+            padding: 72px 0
+        }
+
+        .hero p {
+            color: #ddd;
+            margin: 20px 0 28px;
+            font-size: 17px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 24px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 15px;
+            text-decoration: none;
+            background: var(--yellow);
+            color: var(--black);
+            transition: .2s ease
+        }
+
+        .btn:hover {
+            transform: translateY(-2px)
+        }
+
+        .btn:focus-visible {
+            outline: 3px solid var(--white);
+            outline-offset: 3px
+        }
+
+        .facts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 32px
+        }
+
+        .facts span {
+            background: #2a2a2a;
+            border-radius: 50px;
+            padding: 8px 16px;
+            font-size: 14px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px
+        }
+
+        .card {
+            background: var(--gray-100);
+            border-radius: 14px;
+            padding: 22px
+        }
+
+        .card h3 {
+            font-size: 17px;
+            margin-bottom: 6px
+        }
+
+        .card p {
+            font-size: 15px;
+            color: var(--gray-600)
+        }
+
+        .card.yellow {
+            background: var(--yellow)
+        }
+
+        .card.yellow p {
+            color: var(--black)
+        }
+
+        .band {
+            background: var(--yellow)
+        }
+
+        .list {
+            list-style: none;
+            display: grid;
+            gap: 12px
+        }
+
+        .list li {
+            padding-left: 28px;
+            position: relative
+        }
+
+        .list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: 800
+        }
+
+        details {
+            background: var(--gray-100);
+            border-radius: 14px;
+            padding: 16px 20px;
+            margin-bottom: 10px
+        }
+
+        summary {
+            font-weight: 600;
+            cursor: pointer
+        }
+
+        details p {
+            margin-top: 10px;
+            color: var(--gray-600)
+        }
+
+        .cta {
+            text-align: center
+        }
+
+        .cta p {
+            margin: 0 auto 24px
+        }
+
+        .cta .btn {
+            background: var(--black);
+            color: var(--white)
+        }
+
+        footer {
+            padding: 24px 0;
+            font-size: 13px;
+            color: var(--gray-600);
+            text-align: center
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            .btn {
+                transition: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+
+        <a href="../index.html#cursos" class="icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path stroke="#F2B01E" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M14 5l-7 7 7 7"></path>
+                </g>
+            </svg>
+        </a>
+
+        <div class="wrap">
+            <h1>Pós-técnico em Enfermagem do Trabalho</h1>
+            <p>Você já é Técnico(a) em Enfermagem. Agora especialize-se em saúde ocupacional e atue na prevenção de
+                acidentes e no cuidado com a saúde dos trabalhadores.</p>
+            <a class="btn" href="https://wa.me/5585988330211">Quero me especializar</a>
+            <div class="facts">
+                <span>Duração: 10 meses de 400h</span>
+                 <span>Modalidade: Presencial</span>
+                <span>Turnos: Noite 18h às 21h  ou aos Finais de Semana 8h às 16h</span>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="wrap">
+            <h2>Para quem é este curso?</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Técnicos em enfermagem:</h3>
+                    <p>Quem quer sair da rotina hospitalar e abrir um novo caminho na carreira.</p>
+                </div>
+                <div class="card">
+                    <h3>Quem busca especialização:</h3>
+                    <p>Quem quer se destacar nos processos seletivos e ter mais chances de crescer.</p>
+                </div>
+                <div class="card">
+                    <h3>Quem atua em empresas:</h3>
+                    <p>Quem já trabalha com saúde no ambiente corporativo e quer mais base técnica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="band">
+        <div class="wrap">
+            <h2>O que você vai aprender</h2>
+            <ul class="list">
+                <li>Saúde ocupacional e o papel da enfermagem do trabalho</li>
+                <li>Prevenção de acidentes e doenças relacionadas ao trabalho</li>
+                <li>Normas Regulamentadoras (NRs) ligadas à saúde e segurança</li>
+                <li>Exames ocupacionais e acompanhamento da saúde do trabalhador</li>
+                <li>Ergonomia e análise dos riscos no ambiente de trabalho</li>
+                <li>Primeiros socorros e atendimento a emergências na empresa</li>
+                <li>Registro e comunicação de acidentes de trabalho</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <h2>Por que estudar com a gente</h2>
+            <div class="grid">
+                <div class="card yellow">
+                    <h3>Conteúdo atual</h3>
+                    <p>Aulas alinhadas às normas e à rotina real das empresas.</p>
+                </div>
+                <div class="card yellow">
+                    <h3>Foco na prática</h3>
+                    <p>Casos reais e situações que você vai encontrar no trabalho.</p>
+                </div>
+                <div class="card yellow">
+                    <h3>Professores da área</h3>
+                    <p>Profissionais que atuam com saúde ocupacional.</p>
+                </div>
+                <div class="card yellow">
+                    <h3>Horários flexíveis</h3>
+                    <p>[Descreva as turmas] para você estudar sem largar o emprego.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <section class="band">
+        <div class="wrap">
+            <h2>O que você vai aprender</h2>
+            <ul class="list">
+                <li>Indústrias</li>
+                <li>Construção Civil</li>
+                <li>Empresas de Logística</li>
+                <li>Hospitais</li>
+                <li>Comércio e Serviços</li>
+                <li>Setores de Saúde e Segurança do Trabalho</li>
+
+               <p>Toda empresa que cuida da saúde de seus funcionários precisa desse
+                profissional.</p>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <h2>Perguntas frequentes</h2>
+            <details>
+                <summary>Preciso ser técnico(a) em enfermagem?</summary>
+                <p>Sim! Para obter a certificação da especialização técnica é necessário ter concluido o curso Técnico em Enfermagem.</p>
+            </details>
+ 
+            <details>
+                <summary>Tem estágio?</summary>
+                <p>Sim, os alunos realizam aulas teóricas e estágio curricular.</p>
+            </details>
+            <details>
+                <summary>Após a conclusão, como recebo o certificado?</summary>
+                <p>O certificado será digital e enviado ao email após a conclusão do curso.</p>
+            </details>
+        </div>
+    </section>
+
+    <section class="cta" id="inscricao">
+        <div class="wrap">
+            <h2>Dê o próximo passo na sua carreira.</h2>
+            <p>Fale com a gente, tire suas dúvidas e garanta sua vaga na próxima turma.</p>
+            <a class="btn" href="https://wa.me/5585988330211">Falar no WhatsApp</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">Ceeds Cursos Técnicos · Rua 5, 128 - Jereissate 1 - Maracanaú · (85) 98833-0211</div>
+    </footer>
+
+</body>
+
+</html>

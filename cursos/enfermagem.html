@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Curso Técnico em Enfermagem</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --yellow: #F2B01E;
+            --black: #161616;
+            --white: #fff;
+            --gray-100: #F3F2EE;
+            --gray-600: #555;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font-family: Inter, system-ui, sans-serif;
+            color: var(--black);
+            background: var(--white);
+            line-height: 1.6
+        }
+
+        .icon svg {
+            width: 24px;
+            /* Um pouco menor no celular */
+            height: 24px;
+            margin: 0 0 5px 20px;
+            /* Margem esquerda reduzida para telas pequenas */
+            fill: none;
+            stroke: #fffefe;
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* Configuração para Desktop (telas maiores que 768px) */
+        @media (min-width: 768px) {
+            .icon svg {
+                width: 32px;
+                height: 32px;
+                margin: 0 0 2px 100px;
+                /* Retorna ao seu design original */
+            }
+        }
+
+        .wrap {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px
+        }
+
+        .wrap p{
+            text-align: justify;
+        }
+
+        
+        #atuacao{
+            padding:20px;
+            text-align: justify;
+        }
+
+
+        section {
+            padding: 56px 0
+        }
+
+        h1 {
+            font-size: clamp(32px, 6vw, 52px);
+            line-height: 1.1;
+            font-weight: 800;
+            max-width: 15ch
+        }
+
+        h2 {
+            font-size: clamp(24px, 4vw, 32px);
+            line-height: 1.2;
+            font-weight: 800;
+            margin-bottom: 24px
+        }
+
+        p {
+            max-width: 60ch
+        }
+
+        .hero {
+            background: var(--black);
+            color: var(--white);
+            padding: 72px 0
+        }
+
+        .hero p {
+            color: #ddd;
+            margin: 20px 0 28px;
+            font-size: 17px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 24px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 15px;
+            text-decoration: none;
+            background: var(--yellow);
+            color: var(--black);
+            transition: .2s ease
+        }
+
+        .btn:hover {
+            transform: translateY(-2px)
+        }
+
+        .btn:focus-visible {
+            outline: 3px solid var(--white);
+            outline-offset: 3px
+        }
+
+        .facts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 32px
+        }
+
+        .facts span {
+            background: #2a2a2a;
+            border-radius: 50px;
+            padding: 8px 16px;
+            font-size: 14px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px
+        }
+
+        .card {
+            background: var(--gray-100);
+            border-radius: 14px;
+            padding: 22px
+        }
+
+        .card h3 {
+            font-size: 17px;
+            margin-bottom: 6px
+        }
+
+        .card p {
+            font-size: 15px;
+            color: var(--gray-600)
+        }
+
+        .card.yellow {
+            background: var(--yellow)
+        }
+
+        .card.yellow p {
+            color: var(--black)
+        }
+
+        .band {
+            background: var(--yellow)
+        }
+
+        .list {
+            list-style: none;
+            display: grid;
+            gap: 12px
+        }
+
+        .list li {
+            padding-left: 28px;
+            position: relative
+        }
+
+        .list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: 800
+        }
+
+        details {
+            background: var(--gray-100);
+            border-radius: 14px;
+            padding: 16px 20px;
+            margin-bottom: 10px
+        }
+
+        summary {
+            font-weight: 600;
+            cursor: pointer
+        }
+
+        details p {
+            margin-top: 10px;
+            color: var(--gray-600)
+        }
+
+        .cta {
+            text-align: center
+        }
+
+        .cta p {
+            margin: 0 auto 24px
+        }
+
+        .cta .btn {
+            background: var(--black);
+            color: var(--white)
+        }
+
+        footer {
+            padding: 24px 0;
+            font-size: 13px;
+            color: var(--gray-600);
+            text-align: center
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            .btn {
+                transition: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+
+        <a href="../index.html#cursos" class="icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                fill="none">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path stroke="#F2B01E" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M14 5l-7 7 7 7"></path>
+                </g>
+            </svg>
+        </a>
+
+        <div class="wrap">
+            <h1>Torne-se Técnico(a) em Enfermagem</h1>
+            <p>O Curso Técnico em Enfermagem prepara o aluno para atuar na assistência à saúde, desenvolvendo
+                conhecimentos teóricos e habilidades práticas para o cuidado de pacientes em diferentes fases da
+                vida.<br> A formação aborda procedimentos de enfermagem, prevenção de doenças, promoção da saúde,
+                biossegurança e assistência humanizada, com aulas práticas e estágio supervisionado conforme as
+                exigências da formação.</p>
+            <a class="btn" href="https://wa.me/5585988330211">Quero me inscrever</a>
+            <div class="facts">
+                <span>Duração: 26 meses de 1800h</span>
+                <span>Modalidade: Presencial</span>
+                <span>Turnos: Manhã 8h às 11h / Tarde 13h às 17h / Noite 18h às 21h / Sábado ou Domingo 8h às 16h</span>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="wrap">
+            <h2>Para quem é este curso</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Quem sonha em trabalhar na área da saúde:</h3>
+                    <p>Você que deseja construir uma carreira de sucesso cuidando de pessoas e contribuindo para a
+                        recuperação da saúde.</p>
+                </div>
+                <div class="card">
+                    <h3>Quem busca a primeira profissão:</h3>
+                    <p>Você que deseja conquistar uma formação técnica e se preparar para novas oportunidades no mercado
+                        de trabalho.</p>
+                </div>
+                <div class="card">
+                    <h3>Quem busca crescimento profissional:</h3>
+                    <p>Quem deseja adquirir conhecimentos técnicos e desenvolver habilidades para atuar na área da
+                        enfermagem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="band">
+        <div class="wrap">
+            <h2>O que você vai aprender</h2>
+            <ul class="list">
+                <li>Cuidados básicos ao paciente: higiene, conforto e mobilização</li>
+                <li>Aferição de sinais vitais: pressão, temperatura, pulso e respiração</li>
+                <li>Administração de medicamentos e noções de farmacologia</li>
+                <li>Curativos, biossegurança e controle de infecção</li>
+                <li>Primeiros socorros e atendimento em urgência</li>
+                <li>Ética profissional e humanização do cuidado</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <h2>Por que estudar com a gente?</h2>
+            <div class="grid">
+                <div class="card yellow">
+                    <h3>Prática desde o início</h3>
+                    <p>Laboratório equipado para você treinar antes de atender pacientes reais.</p>
+                </div>
+                <div class="card yellow">
+                    <h3>Estágio supervisionado</h3>
+                    <p>Vivência em UPAs, postos e hospitais com acompanhamento.</p>
+                </div>
+                <div class="card yellow">
+                    <h3>Professores da área</h3>
+                    <p>Quem ensina é quem atua no dia a dia da enfermagem.</p>
+                </div>
+                <div class="card yellow">
+                    <h3>Apoio na carreira</h3>
+                    <p>Orientação para currículo e entrevistas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <section class="band">
+        <div class="wrap">
+            <h2>Onde o Técnico em Enfermagem pode atuar?</h2>
+            <ul class="list">
+                <li>Hospitais públicos e privados.</li>
+                <li> Clínicas médicas e especializadas.</li>
+                <li> Unidades de pronto atendimento e serviços de urgência, conforme os requisitos da função.</li>
+                <li>Unidades básicas de saúde.</li>
+                <li>Serviços de atendimento domiciliar.</li>
+                <li>Ambulatórios e serviços de saúde ocupacional.</li>
+                <li>Instituições de longa permanência e outros serviços de assistência à saúde.</li>
+            </ul>
+
+            <p id="atuacao">O exercício profissional depende da conclusão da formação técnica, do registro no Conselho Regional de Enfermagem (COREN) e do cumprimento das normas profissionais aplicáveis.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <h2>Perguntas frequentes</h2>
+            <details>
+                <summary>Preciso ter ensino médio completo?</summary>
+                <p>Ser regularmente matriculado no ensino médio ou concluído.</p>
+            </details>
+            <details>
+                <summary>O diploma é reconhecido?</summary>
+                <p>Diploma reconhecido pelo MEC.</p>
+            </details>
+            <details>
+                <summary>Como funciona o estágio?</summary>
+                <p>Estágio supervisionado com acompanhamento de preceptores de estágios encaminhados pela Instituição
+                    Ceeds Cursos.</p>
+            </details>
+        </div>
+    </section>
+
+    <section class="cta" id="inscricao">
+        <div class="wrap">
+            <h2>Comece sua carreira na Enfermagem</h2>
+            <p>As vagas da próxima turma são limitadas. Fale com a gente e garanta a sua.</p>
+            <a class="btn" href="https://wa.me/5585988330211">Falar no WhatsApp</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">Ceeds Cursos Técnicos · Rua 5, 128 - Jereissate 1 - Maracanaú · (85) 98833-0211</div>
+    </footer>
+
+</body>
+
+</html>

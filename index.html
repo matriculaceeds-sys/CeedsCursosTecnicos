@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Saúde em Foco - cursos na área da saúde">
+    <title>CEEDS CURSOS | Formação para um futuro melhor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header" id="header">
+
+        <a href="#inicio" class="logo">
+            <img src="img/Logo-CEEDS-H2.png" alt="logo-ceeds">
+        </a>
+
+        <nav class="nav">
+            <a href="#inicio" class="active">Início</a>
+            <a href="#cursos">Cursos</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <button class="menu-button" id="menuButton" aria-label="Abrir menu">
+            ☰
+        </button>
+
+    </header>
+
+    <!-- Barra lateral -->
+    <aside class="side-menu" id="sideMenu">
+
+        <button class="close-menu" id="closeMenu" aria-label="Fechar menu">
+            ×
+        </button>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#cursos">Nossos cursos</a>
+            <a href="#sobre">Sobre nós</a>
+            <a href="#contato">Contate-nos</a>
+        </nav>
+
+    </aside>
+
+    <!-- Fundo escuro -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <main>
+
+        <!-- ================= INÍCIO ================= -->
+        <section id="inicio" class="page hero-page">
+
+
+            <div class="hero-image">
+
+                <img src="img/IMG-20260929-WA0006.jpg" alt="Cursos de saúde">
+
+                <div class="hero-content">
+                    <span class="eyebrow">
+                        CURSOS TÉCNICOS & <br>PROFISSIONALIZANTES
+                    </span>
+
+                    <h1>
+                        Na área <br>
+                        da saúde,<br>
+                        você faz a <em><br>diferença.</em>
+                    </h1>
+
+                    <p>
+                        Cursos de Enfermagem e outras áreas da saúde,
+                        com qualidade, prática e foco no seu futuro.
+                    </p>
+
+                    <a href="#cursos" class="btn btn-yellow">
+                        Conheça nossos cursos <span>→</span>
+                    </a>
+                </div>
+            </div>
+
+            <article class="featured-course">
+                <div>
+                    <span class="eyebrow" id="destaque">CURSO EM DESTAQUE</span>
+                    <h2>Enfermagem</h2>
+                    <p>Forme-se com uma metodologia moderna, infraestrutura completa e foco na prática
+                        profissional.</p>
+                    <a href="cursos/enfermagem.html" class="btn btn-yellow">Saiba mais →</a>
+                </div>
+                <div class="featured-photo"></div>
+            </article>
+
+
+            <div class="reason-container">
+                <div class="section-title">
+                    <span class="eyebrow dark">POR QUE ESTUDAR CONOSCO?</span>
+                    <h2>Mais que um curso,<br>uma vocação.</h2>
+                </div>
+
+                <div class="reason-grid">
+
+                    <div class="reason-item">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 19h16M6 17V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v10M9 5V3h6v2M9 9h6M9 13h6" />
+                        </svg>
+                        <b>Corpo docente qualificado</b>
+                    </div>
+
+                    <div class="reason-item">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 19V5M4 19h17M8 15l3-4 3 2 5-7" />
+                        </svg>
+                        <b>Alta empregabilidade</b>
+                    </div>
+
+                    <div class="reason-item">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M20.8 8.8c0 5.5-8.8 10.2-8.8 10.2S3.2 14.3 3.2 8.8A4.8 4.8 0 0 1 12 6a4.8 4.8 0 0 1 8.8 2.8Z" />
+                        </svg>
+                        <b>Formação humanizada</b>
+                    </div>
+
+                    <div class="reason-item">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="9" cy="8" r="3" />
+                            <circle cx="17" cy="9" r="2.5" />
+                            <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14c3.3 0 6 2.2 6 5" />
+                        </svg>
+                        <b>Suporte ao aluno</b>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ================= CURSOS ================= -->
+        <section id="cursos" class="page">
+            <div class="page-header">
+                <span class="eyebrow">FORMAÇÃO</span>
+                <h1>Nossos <em>cursos</em></h1>
+                <p>Escolha a área que mais combina com o seu perfil.</p>
+            </div>
+            <div class="search-box">
+                <span>⌕</span>
+                <input type="text" id="searchInput" placeholder="Buscar curso...">
+            </div>
+
+            <div class="filters">
+                <button class="filter active" data-category="Todos">Todos</button>
+                <button class="filter" data-category="Enfermagem">Enfermagem</button>
+                <button class="filter" data-category="Saúde">Saúde</button>
+            </div>
+
+            <div class="course-list">
+
+                <a href="cursos/enfermagem.html" class="course-card" data-category="Enfermagem">
+                    <img src="img/enfermagem.png" alt="Técnico em Enfermagem">
+
+                    <div class="course-info">
+                        <h3>Técnico em Enfermagem</h3>
+                        <p>Cuide, acolha e faça a diferença na saúde.</p>
+                    </div>
+
+                    <b>›</b>
+                </a>
+
+                <a href="cursos/enf.trabalho.html" class="course-card" data-category="Enfermagem">
+                    <img src="img/postecnico.png">
+
+                    <div class="course-info">
+                        <h3>Pós Técnico em Enfermagem do Trabalho</h3>
+                        <p>Promova saúde e segurança no ambiente profissional.</p>
+                    </div>
+                    <b>›</b>
+                </a>
+
+                <a href="cursos/instrumentacao.html" class="course-card" data-category="Saúde">
+                    <img src="img/instrumentacao.png">
+
+                    <div class="course-info">
+                        <h3>Instrumentação cirúgica</h3>
+                        <p>Atue nos bastidores de grandes procedimentos.</p>
+                    </div>
+                    <b>›</b>
+                </a>
+
+                <a href="cursos/an.clinica.html" class="course-card" data-category="Saúde">
+                    <img src="img/an.clinicas.png">
+
+                    <div class="course-info">
+                        <h3>Auxiliar de Análises Clínicas</h3>
+                        <p>Aprenda a rotina laboratorial e desenvolva habilidades essenciais para auxiliar na realização
+                            de exames clínicos.</p>
+                    </div>
+                    <b>›</b>
+                </a>
+
+                <a href="cursos/injetaveis.html" class="course-card" data-category="Saúde">
+                    <img src="img/injetaveis.png">
+
+                    <div class="course-info">
+                        <h3>Práticas Injetáveis</h3>
+                        <p>Domine técnicas essenciais para a prática profissional.</p>
+                    </div>
+                    <b>›</b>
+                </a>
+
+                <a href="cursos/socorrista.html" class="course-card" data-category="Saúde">
+                    <img src="img/socorrista.png">
+
+                    <div class="course-info">
+                        <h3>Formação em Socorrista</h3>
+                        <p>Esteja preparado quando cada segundo importa.</p>
+                    </div>
+                    <b>›</b>
+                </a>
+
+                <a href="cursos/aph.html" class="course-card" data-category="Saúde">
+                    <img src="img/aph.png">
+
+                    <div class="course-info">
+                        <h3>APH - Atendimento Pré-Hospitalar</h3>
+                        <p>Conhecimento e agilidade para situações de emergência.</p>
+                    </div>
+                    <b>›</b>
+                </a>
+
+                <a href="cursos/adm.html" class="course-card" data-category="Saúde">
+                    <img src="img/adm.jpg">
+
+                    <div class="course-info">
+                        <h3>Assistente Administrativo</h3>
+                        <p>Desenvolva habilidades para uma rotina administrativa eficiente.</p>
+                    </div>
+                    <b>›</b>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- ================= SOBRE ================= -->
+        <section id="sobre" class="page">
+            <div class="page-header dark-header">
+                <span class="eyebrow">SOBRE NÓS</span>
+                <h1>Formando profissionais para transformar a <em> saúde e contruir um futuro melhor.</em></h1>
+            </div>
+
+            <div class="content">
+                <p class="lead">O Ceeds Cursos é uma instituição de ensino comprometida com a formação de profissionais
+                    preparados para os desafios do mercado e, acima de tudo, para cuidar de vidas.</p>
+
+                <div class="mission-grid">
+                    <div><span>◎</span>
+                        <h3>Nossa missão</h3>
+                        <p>Transformar vidas por meio da educação, formando profissionais qualificados, éticos e
+                            preparados para atuar com excelência na área da saúde.</p>
+                    </div>
+                    <div><span>◉</span>
+                        <h3>Nossa visão</h3>
+                        <p>Ser referência em educação na área da saúde, reconhecida pela qualidade do ensino, inovação,
+                            compromisso e impacto positivo na sociedade.</p>
+                    </div>
+                    <div><span>♥</span>
+                        <h3>Nossos valores</h3>
+                        <p>Deus em 1º lugar, Educação que transforma, Respeito, Ética/Moral, Autoresponsabilidade,
+                            Palavras devem ser horadas.</p>
+                    </div>
+                </div>
+
+                <div class="quote">“Aqui, o seu talento encontra o propósito.”<small>— Ceeds Cursos</small></div>
+            </div>
+        </section>
+
+        <!-- ================= Beneficios ================= -->
+        <section id="processo" class="page">
+            <div class="page-header">
+                <h1>Beneficios do <em>Ceeds</em></h1>
+                <p>Vantagens de estudar com a gente.</p>
+            </div>
+
+            <div class="beneficio-grid">
+                <div class="beneficio">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        transform="rotate(0)matrix(-1, 0, 0, -1, 0, 0)">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M12 6V18" stroke="#000000" stroke-width="0.8399999999999999"
+                                stroke-linecap="round"></path>
+                            <path
+                                d="M15 9.5C15 8.11929 13.6569 7 12 7C10.3431 7 9 8.11929 9 9.5C9 10.8807 10.3431 12 12 12C13.6569 12 15 13.1193 15 14.5C15 15.8807 13.6569 17 12 17C10.3431 17 9 15.8807 9 14.5"
+                                stroke="#000000" stroke-width="0.8399999999999999" stroke-linecap="round"></path>
+                            <path
+                                d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7"
+                                stroke="#000000" stroke-width="0.8399999999999999" stroke-linecap="round"></path>
+                        </g>
+                    </svg>
+                    <b>Moeda própria<br>Euras</b>
+                </div>
+
+                <div class="beneficio">
+                    <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-7.68 -7.68 79.36 79.36"
+                        enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000" transform="rotate(45)"
+                        stroke="#000000" stroke-width="0.256">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <g>
+                                <path fill="#000000"
+                                    d="M63.029,42.285l-15.054-9.032c0,0.004,0,0.009-0.001,0.013C47.984,32.844,48,32.427,48,32 c0-16.026-7.692-26.865-14.891-31.664C32.773,0.112,32.387,0,32,0s-0.773,0.112-1.109,0.336C23.692,5.135,16,15.974,16,32 c0,0.427,0.016,0.844,0.025,1.266c-0.001-0.004-0.001-0.009-0.001-0.013L0.971,42.285C0.368,42.646,0,43.297,0,44v6 c0,1.104,0.896,2,2,2h17.188c0.516,1.627,0.904,2.617,0.954,2.742C20.447,55.502,21.183,56,22,56h5c0,4.785,2.585,8,5,8 c2.396,0,4.961-3.166,5-7.891c0.002-0.036,0.003-0.072,0.003-0.109H42c0.817,0,1.553-0.498,1.857-1.258 c0.05-0.125,0.438-1.115,0.954-2.742H62c1.104,0,2-0.896,2-2v-6C64,43.297,63.632,42.646,63.029,42.285z M32,2c6,4,14,14,14,30 c0,4.401-0.539,8.531-1.221,12H19.221C18.539,40.531,18,36.401,18,32C18,16,26,6,32,2z M2,44l14.117-8.471 c0.234,3.901,0.814,7.484,1.472,10.471H2V44z M2,50v-2h16.059c0.182,0.728,0.362,1.396,0.54,2.022 c-0.003-0.008-0.005-0.015-0.007-0.022H2z M32,62c-1,0-3-2-3-6h6C35,60,33,62,32,62z M42,54H22c0,0-1.254-3.136-2.357-8h24.715 C43.254,50.864,42,54,42,54z M62,50H45.408c-0.002,0.008-0.004,0.015-0.007,0.022c0.178-0.626,0.358-1.295,0.54-2.022H62V50z M62,46H46.411c0.657-2.986,1.237-6.569,1.472-10.471L62,44V46z">
+                                </path>
+                                <path fill="#000000"
+                                    d="M32,30c3.313,0,6-2.687,6-6s-2.687-6-6-6s-6,2.687-6,6S28.687,30,32,30z M32,20c2.209,0,4,1.791,4,4 s-1.791,4-4,4s-4-1.791-4-4S29.791,20,32,20z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                    <b>Liga Ceeds</b>
+                </div>
+
+                <div class="beneficio">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"
+                        fill="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <g>
+                                <path style="fill:#212121;"
+                                    d="M150.085,294.683h-31.549c-33.241,0-60.285-27.044-60.285-60.285s27.044-60.285,60.285-60.285 h31.549c4.328,0,7.837,3.509,7.837,7.837c0,4.328-3.509,7.837-7.837,7.837h-31.549c-24.599,0-44.612,20.013-44.612,44.612 s20.013,44.612,44.612,44.612h31.549c4.328,0,7.837,3.509,7.837,7.837S154.413,294.683,150.085,294.683z">
+                                </path>
+                                <path style="fill:#212121;"
+                                    d="M385.806,294.683h-31.549c-4.328,0-7.837-3.509-7.837-7.837s3.509-7.837,7.837-7.837h31.549 c24.599,0,44.612-20.013,44.612-44.612s-20.013-44.612-44.612-44.612h-31.549c-4.328,0-7.837-3.509-7.837-7.837 c0-4.328,3.509-7.837,7.837-7.837h31.549c33.241,0,60.285,27.044,60.285,60.285S419.047,294.683,385.806,294.683z">
+                                </path>
+                            </g>
+                            <path style="fill:#212121;"
+                                d="M273.922,435.635v-78.734h-43.505v78.734c0,13.374-10.842,24.215-24.216,24.215l0,0v22.675h92.744 v-22.675h-0.808C284.763,459.851,273.922,449.009,273.922,435.635z">
+                            </path>
+                            <rect x="230.41" y="351.397" style="fill:#212121;" width="43.133" height="48.857"></rect>
+                            <path style="fill:#212121;"
+                                d="M354.257,161.958v113.072c0,56.148-45.939,102.085-102.085,102.085l0,0 c-56.148,0-102.085-45.939-102.085-102.085V161.958H354.257z">
+                            </path>
+                            <g>
+                                <path style="opacity:0.47;fill:#212121;enable-background:new ;"
+                                    d="M323.114,161.958v81.928 c0,56.148-45.939,102.085-102.085,102.085l0,0c-20.148,0-38.98-5.916-54.848-16.096c18.189,28.352,49.991,47.239,85.991,47.239l0,0 c56.148,0,102.085-45.939,102.085-102.085V161.958H323.114z">
+                                </path>
+                                <polygon style="fill:#212121;"
+                                    points="28.643,85.924 40.895,57.281 61.398,80.736 92.425,83.537 76.454,110.285 83.378,140.659 53.005,133.735 26.256,149.706 23.455,118.679 0,98.176 ">
+                                </polygon>
+                                <polygon style="fill:#212121;"
+                                    points="233.163,37.611 255.835,1.761 278.317,37.731 319.418,48.216 292.156,80.713 294.885,123.041 255.554,107.156 216.14,122.831 219.094,80.517 192.006,47.877 ">
+                                </polygon>
+                                <polygon style="fill:#212121;"
+                                    points="465.212,76.285 494.128,64.695 492.041,95.778 512,119.699 481.793,127.319 465.212,153.692 448.629,127.319 418.422,119.699 438.381,95.778 436.294,64.695 ">
+                                </polygon>
+                            </g>
+                            <rect x="186.295" y="482.531" style="fill:#32312f;" width="131.647" height="27.708"></rect>
+                            <rect x="150.089" y="161.957" style="fill:#212121;" width="204.173" height="33.924"></rect>
+                            <rect x="186.295" y="496.376" style="fill:#212121;" width="131.647" height="13.854"></rect>
+                            <path style="opacity:0.22;fill:#FFFFFF;enable-background:new ;"
+                                d="M174.372,340.382c9.583,11.446,21.614,20.777,35.268,27.17 V161.958h-35.268V340.382z">
+                            </path>
+                        </g>
+                    </svg>
+                    <b>Alunos<br>destaques</b>
+                </div>
+
+                <div class="beneficio">
+                    <svg viewBox="-61.44 -61.44 1146.88 1146.88" class="icon" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" fill="#000000" stroke="#000000" stroke-width="6.144">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M272.2 696.2m-59.3 0a59.3 59.3 0 1 0 118.6 0 59.3 59.3 0 1 0-118.6 0Z"
+                                fill="#000000"></path>
+                            <path
+                                d="M392.1 485.4l-62.5-253v-0.1c-0.6-3-1.4-6.3-2.2-9.8-7.2-31.8-18.1-79.8 7.2-111.5 15.8-19.7 43.3-29.7 81.9-29.7v15c-33.8 0-57.4 8.1-70.2 24.1-20.8 26.1-10.9 69.8-4.3 98.8 0.8 3.5 1.6 6.8 2.2 9.9l62.4 252.8-14.5 3.5zM731.5 485.1l-14.6-3.6 62.4-252.4c0.9-4.6 2-9.5 3.1-14.6 6.6-29.7 15.6-70.4-3.8-94.6-12.6-15.7-36.6-23.7-71.5-23.7v-15c40.2 0 67.4 9.6 83.2 29.3 23.9 29.8 14 74.5 6.8 107.2-1.1 5.2-2.2 10-3.1 14.4l-0.1 0.4-62.4 252.6zM645.6 952.4c-22.4 0-44.1-7.9-61.5-22.6-21.3-18.1-33.6-44.6-33.6-72.6l0.5-254.6h21.5l-0.2 84.8h188.1c20.1 0 38.4 8.4 51.4 23.8 12.4 14.5 19.3 34.1 19.5 55 0.4 39.7-20.4 82.6-58.6 120.8-33.8 33.8-76.6 58.4-111.7 64.1-5.1 0.9-10.2 1.3-15.4 1.3zM559 610.6l-0.4 246.6c0 25.6 11.2 49.9 30.7 66.5s45.2 23.7 70.5 19.6c33.5-5.5 74.7-29.2 107.4-61.9 36.7-36.7 56.7-77.5 56.3-115-0.2-19.1-6.5-36.8-17.6-49.9-11.7-13.7-27.4-21-45.3-21H572.4v5.5h180.8c40.8 0 63.4 24.3 63.7 68.4 0.2 33.1-18.8 71.6-51.9 105.7-30.2 31-68.7 54.6-100.5 61.5-26.1 5.7-50.6 0.5-69.1-14.4-19.9-16-31.2-42.4-31.2-72.3l0.4-239.3H559z m13.4 98.4l-0.3 140.9c0 27.5 10.3 51.5 28.2 66 16.6 13.4 38.7 17.9 62.3 12.8 30.4-6.6 67.4-29.3 96.5-59.2 31.7-32.6 49.8-69.1 49.7-100.1-0.1-27.6-9.9-60.4-55.7-60.4H572.4z"
+                                fill="#000000"></path>
+                            <path
+                                d="M557.3 709h-216v-21.5h215.8v8H349.3v5.5h208zM272.2 728.3c-17.7 0-32.1-14.4-32.1-32.1 0-17.7 14.4-32.1 32.1-32.1s32.1 14.4 32.1 32.1c0.1 17.7-14.3 32.1-32.1 32.1z m0-56.3c-13.3 0-24.1 10.8-24.1 24.1s10.8 24.1 24.1 24.1 24.1-10.8 24.1-24.1c0.1-13.2-10.8-24.1-24.1-24.1z"
+                                fill="#000000"></path>
+                            <path
+                                d="M272.2 780.7c-46.6 0-84.5-37.9-84.5-84.5s37.9-84.5 84.5-84.5 84.5 37.9 84.5 84.5c0.1 46.6-37.8 84.5-84.5 84.5z m0-154.1c-38.3 0-69.5 31.2-69.5 69.5s31.2 69.5 69.5 69.5 69.5-31.2 69.5-69.5-31.1-69.5-69.5-69.5z"
+                                fill="#000000"></path>
+                            <path d="M581.4 615.7h-38.9v-52.5h38.9v52.5z m-24-15h8.9v-22.5h-8.9v22.5z" fill="#000000">
+                            </path>
+                            <path
+                                d="M657.1 570H466.4c-37.2 0-63.8-25-78.9-74.3v-0.2l-2-7.9c-0.6-2.4-0.1-4.9 1.4-6.9s3.8-3.1 6.3-3.1h14.5c3 0 5.6 2 6.4 4.8 11 37.9 24.6 59.8 62 59.8h171.5c36.6 0 49.2-19.3 62.3-59.9 0.9-2.8 3.5-4.7 6.4-4.7h14.4c2.5 0 4.8 1.1 6.3 3.1s2 4.5 1.4 6.9l-2 7.6c-14.1 48.3-42.2 74.8-79.3 74.8z m-261.9-76.5c14.2 46.1 37.5 68.6 71.2 68.6h190.7c18 0 33.6-6.9 46.3-20.6 10.7-11.6 19.5-28.3 25.3-48.3l1.9-7.4h-13.5c-13.9 42.8-28.6 64.5-69.6 64.5H476.1c-41.7 0-58-25.8-69.4-64.5h-13.6l2.1 7.7zM494.2 86.6V91h-72v-4.4h72m3-15h-78c-6.6 0-12 5.4-12 12V94c0 6.6 5.4 12 12 12h78c6.6 0 12-5.4 12-12V83.6c0-6.6-5.4-12-12-12zM702.4 86.6V91h-72v-4.4h72m3-15h-78c-6.6 0-12 5.4-12 12V94c0 6.6 5.4 12 12 12h78c6.6 0 12-5.4 12-12V83.6c0-6.6-5.4-12-12-12z"
+                                fill="#000000"></path>
+                        </g>
+                    </svg>
+                    <b>Ações sociais</b>
+                </div>
+
+                <div class="beneficio">
+                    <svg height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"
+                        fill="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path style="fill:#ffffff;"
+                                d="M495.792,351.535H442.27c-2.577,0-4.772-1.873-5.175-4.419l-3.28-20.69l-2.591-16.321L410.848,181.53 l-11.086-12.048l-22.037-23.949l-19.184-20.856l8.976,194.09l1.097,23.709l4.326,93.686l1.108,23.677l2.16,46.68 c0.138,2.985-2.245,5.482-5.234,5.482H141.026c-2.988,0-5.372-2.496-5.234-5.482l2.16-46.68l6.531-141.072l8.965-193.755l0.01-0.334 l-14.336,15.579l-37.972,41.273L80.775,310.115l-2.591,16.311l-3.28,20.69c-0.403,2.545-2.598,4.419-5.175,4.419H16.207 c-3.289,0-5.765-2.995-5.146-6.224l3.615-18.884l3.135-16.332l28.891-150.862L151.683,38.201c1.724-1.975,3.709-3.647,5.904-4.974 c1.661-1.045,3.459-1.86,5.339-2.476c2.508-0.825,5.183-1.275,7.889-1.275h15.82l0.972-1.055L213.729,0h83.352l25.14,27.345 l1.003,1.087l0.951,1.045c0,0,9.644,0.031,16.091,0.042h2.288c1.829,0,3.605,0.24,5.339,0.711c4.775,1.264,9.101,4.159,12.424,7.973 l57.94,66.8l21.358,24.628l25.684,29.602l28.891,150.862l3.135,16.332l3.615,18.884C501.557,348.54,499.081,351.535,495.792,351.535 z">
+                            </path>
+                            <g>
+                                <path style="fill:#000000;"
+                                    d="M255.406,447.827c-4.512,0-8.169-3.657-8.169-8.169V174.699c0-4.512,3.657-8.169,8.169-8.169 s8.169,3.657,8.169,8.169v264.959C263.575,444.168,259.918,447.827,255.406,447.827z">
+                                </path>
+                                <path style="fill:#000000;"
+                                    d="M340.266,29.523v39.353c0,4.368-1.318,8.627-3.769,12.232l-63.098,92.79 c-8.507,12.493-27.481,12.493-35.987,0l-63.098-92.79c-2.45-3.605-3.769-7.864-3.769-12.232V29.587 c0.12-0.032,0.229-0.076,0.348-0.109h15.739l27.099-29.474h83.346l27.099,29.474C324.179,29.479,333.818,29.511,340.266,29.523z">
+                                </path>
+                            </g>
+                            <path style="fill:#000000;"
+                                d="M213.73,0l32.227,93.692c3.092,8.989,15.806,8.989,18.898,0L297.082,0H213.73z"></path>
+                            <g>
+                                <path style="fill:#000000;"
+                                    d="M374.038,459.832c-0.368,0.024-0.723,0.036-1.091,0.036h-18.533 c-43.801,0-79.445-35.644-79.445-79.445V342.48c0-13.102,10.612-23.715,23.715-23.715h68.832l1.102,23.715l4.328,93.673 L374.038,459.832z">
+                                </path>
+                                <path style="fill:#000000;"
+                                    d="M237.039,342.48v37.943c0,43.801-35.644,79.445-79.445,79.445h-18.533 c-0.368,0-0.736-0.011-1.102-0.036l6.521-141.066h68.844C226.414,318.765,237.039,329.378,237.039,342.48z">
+                                </path>
+                            </g>
+                            <path style="fill:#000000;"
+                                d="M332.092,188.796H294.15c-4.512,0-8.169-3.657-8.169-8.169c0-4.512,3.657-8.169,8.169-8.169h37.942 c4.512,0,8.169,3.657,8.169,8.169C340.261,185.139,336.604,188.796,332.092,188.796z">
+                            </path>
+                            <g>
+                                <path style="fill:#000000;"
+                                    d="M221.613,218.703c-4.512,0-8.169-3.657-8.169-8.169v-3.558c0-4.512,3.657-8.169,8.169-8.169 c4.512,0,8.169,3.657,8.169,8.169v3.558C229.782,215.045,226.125,218.703,221.613,218.703z">
+                                </path>
+                                <path style="fill:#000000;"
+                                    d="M221.613,299.07c-4.512,0-8.169-3.657-8.169-8.169v-3.558c0-4.512,3.657-8.169,8.169-8.169 c4.512,0,8.169,3.657,8.169,8.169v3.558C229.782,295.413,226.125,299.07,221.613,299.07z">
+                                </path>
+                            </g>
+                            <g>
+                                <polygon style="fill:#ffffff;"
+                                    points="247.237,97.413 247.237,162.69 186.633,73.57 186.633,29.479 187.602,28.422 213.732,0.004 ">
+                                </polygon>
+                                <polygon style="fill:#ffffff;"
+                                    points="297.082,0 263.575,97.413 263.575,162.686 324.178,73.573 324.178,29.479 ">
+                                </polygon>
+                            </g>
+                            <path style="fill:#000000;"
+                                d="M263.575,474.095V512h-16.338v-37.905c0-4.51,3.659-8.169,8.169-8.169 S263.575,469.587,263.575,474.095z">
+                            </path>
+                            <g>
+                                <path style="fill:#ffffff;"
+                                    d="M372.947,436.153h-18.533c-30.782,0-55.73-24.948-55.73-55.73V342.48h69.935L372.947,436.153z">
+                                </path>
+                                <path style="fill:#ffffff;"
+                                    d="M139.058,436.153h18.533c30.782,0,55.73-24.948,55.73-55.73V342.48h-69.935L139.058,436.153z">
+                                </path>
+                            </g>
+                            <g>
+                                <path style="fill:#000000;"
+                                    d="M497.319,326.43h-63.502l-2.592-16.328c0.087-0.01,0.163-0.01,0.251-0.01h62.717L497.319,326.43z">
+                                </path>
+                                <path style="fill:#000000;"
+                                    d="M80.772,310.114L78.18,326.43H14.679l3.126-16.338h62.619 C80.543,310.092,80.653,310.092,80.772,310.114z">
+                                </path>
+                            </g>
+                            <g>
+                                <path style="fill:#000000;"
+                                    d="M153.458,107.353v17.324l-14.336,15.579l6.207-33.656 C146.228,101.7,153.458,102.358,153.458,107.353z">
+                                </path>
+                                <path style="fill:#000000;"
+                                    d="M358.551,107.353v17.324l14.336,15.579l-6.207-33.656 C365.781,101.7,358.551,102.358,358.551,107.353z">
+                                </path>
+                                <polygon style="fill:#000000;"
+                                    points="153.448,125.012 153.458,124.677 153.458,124.991 "></polygon>
+                            </g>
+                        </g>
+                    </svg>
+                    <b>Cerimonia do<br>jaléco</b>
+                </div>
+
+                <div class="beneficio">
+                    <svg height="200px" width="200px" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve"
+                        fill="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <style type="text/css">
+                                .st0 {
+                                    fill: #000000;
+                                }
+                            </style>
+                            <g>
+                                <path
+                                    d="M31,26c-0.6,0-1-0.4-1-1V12c0-0.6,0.4-1,1-1s1,0.4,1,1v13C32,25.6,31.6,26,31,26z">
+                                </path>
+                            </g>
+                            <g>
+                                <path
+                                    d="M16,21c-0.2,0-0.3,0-0.5-0.1l-15-8C0.2,12.7,0,12.4,0,12s0.2-0.7,0.5-0.9l15-8c0.3-0.2,0.6-0.2,0.9,0l15,8 c0.3,0.2,0.5,0.5,0.5,0.9s-0.2,0.7-0.5,0.9l-15,8C16.3,21,16.2,21,16,21z">
+                                </path>
+                            </g>
+                            <path
+                                d="M17.4,22.6C17,22.9,16.5,23,16,23s-1-0.1-1.4-0.4L6,18.1V22c0,3.1,4.9,6,10,6s10-2.9,10-6v-3.9L17.4,22.6z">
+                            </path>
+                        </g>
+                    </svg>
+                    <b>Formatura</b>
+                </div>
+
+                <div class="beneficio">
+                    <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="256px" height="256px"
+                        viewBox="-5.12 -5.12 74.24 74.24" enable-background="new 0 0 64 64" xml:space="preserve"
+                        fill="#000000" stroke="#000000" stroke-width="1.7920000000000003">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill="#231F20"
+                                d="M32.001,2.484c0.279,0,0.463,0.509,0.463,0.509l8.806,18.759l20.729,3.167L47,40.299L50.541,62 l-18.54-10.254L13.461,62l3.541-21.701L2.003,24.919l20.729-3.167L31.53,3.009C31.53,3.009,31.722,2.484,32.001,2.484 M32.001,0.007 c-0.775,0-1.48,0.448-1.811,1.15l-8.815,18.778L1.701,22.941c-0.741,0.113-1.356,0.632-1.595,1.343 c-0.238,0.71-0.059,1.494,0.465,2.031l14.294,14.657l-3.378,20.704c-0.124,0.756,0.195,1.517,0.822,1.957 C12.653,63.877,13.057,64,13.461,64c0.332,0,0.666-0.084,0.968-0.25l17.572-9.719l17.572,9.719c0.302,0.166,0.636,0.25,0.968,0.25 c0.404,0,0.808-0.123,1.151-0.366c0.627-0.44,0.946-1.201,0.822-1.957l-3.378-20.704l14.294-14.657 c0.523-0.537,0.703-1.321,0.465-2.031c-0.238-0.711-0.854-1.229-1.595-1.343l-19.674-3.006L33.812,1.157 C33.481,0.455,32.776,0.007,32.001,0.007L32.001,0.007z">
+                            </path>
+                        </g>
+                    </svg>
+                    <b>Melhores do<br>ano</b>
+                </div></s>
+
+                <div class="beneficio">
+                    <svg style="fill:#000000; stroke:none; opacity:1;" fill="#000000" height="40px" width="40px"
+                        version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490" xml:space="preserve">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <g>
+                                <g>
+                                    <g>
+                                        <path
+                                            d="M480,15.871H10c-5.523,0-10,4.477-10,10v410c0,5.523,4.477,10,10,10h260V299.577c-3.229-8.972-5-18.635-5-28.706 c0-46.869,38.131-85,85-85c46.869,0,85,38.131,85,85c0,10.071-1.771,19.733-5,28.706v146.294h50c5.523,0,10-4.477,10-10v-410 C490,20.349,485.523,15.871,480,15.871z M45,175.871h40v20H45V175.871z M175,395.871H45v-20h130V395.871z M235,345.871H45v-20 h190V345.871z M235,295.871H45v-20h190V295.871z M235,245.871H45v-20h190V245.871z M285,135.871h-80v-20h80V135.871z M335,95.871 H155v-20h180V95.871z">
+                                        </path>
+                                        <path
+                                            d="M290,331.02v143.109l50-42.857v-55.4h20v55.4l50,42.857V331.02c-15.385,15.348-36.603,24.852-60,24.852 C326.603,355.872,305.385,346.368,290,331.02z">
+                                        </path>
+                                        <path
+                                            d="M350,205.871c-35.841,0-65,29.159-65,65s29.159,65,65,65s65-29.159,65-65S385.841,205.871,350,205.871z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+
+                    <b>Diploma reconhecido<br>pelo MEC</b>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ================= CONTATO ================= -->
+        <section id="contato" class="page">
+
+            <div class="page-header">
+                <span class="eyebrow">ATENDIMENTO</span>
+                <h1>Fale <em>conosco</em></h1>
+                <p>Estamos prontos para ajudar.</p>
+            </div>
+
+            <div class="content">
+
+                <div class="contact-list">
+
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/5585988330211" target="_blank">
+                        <span><i class="fa-brands fa-whatsapp"></i></span>
+                        <div>
+                            <b>WhatsApp</b>
+                            <small>(85) 98833-0211</small>
+                        </div>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://instagram.com/ceedsmaracanau?psln=MXV3NGp5d204ZWxkNg%3D%3D" target="_blank">
+                        <span><i class="fa-brands fa-instagram"></i></span>
+                        <div>
+                            <b>Instagram</b>
+                            <small>@ceedsmaracanau</small>
+                        </div>
+                    </a>
+
+                    <!-- E-mail -->
+                    <a href="mailto:matriculaceeds@gmail.com">
+                        <span><i class="fa-regular fa-envelope"></i></span>
+                        <div>
+                            <b>E-mail</b>
+                            <small>matriculaceeds@gmail.com</small>
+                        </div>
+                    </a>
+
+                    <!-- Endereço -->
+                    <a>
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                        <div>
+                            <b>Endereço</b>
+                            <small>Rua 5, 128 - Jereissate 1 - Maracanaú - CEP 61.900-340</small>
+                        </div>
+                    </a>
+                </div>
+
+                <h2>Ou envie uma mensagem</h2>
+
+                <form action="mailto:matriculaceeds@gmail.com" method="post" enctype="text/plain">
+
+                    <input type="text" name="nome" placeholder="Nome" required>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                    <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+
+                    <button class="btn btn-yellow" type="submit">
+                        Enviar mensagem
+                    </button>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            © 2026 Ceeds Cursos Técnicos.
+            Todos os direitos reservados.
+        </div>
+    </footer>
+
+
+
+    <script>
+
+
+        const header = document.getElementById("header");
+        const menuButton = document.getElementById("menuButton");
+        const sideMenu = document.getElementById("sideMenu");
+        const closeMenu = document.getElementById("closeMenu");
+        const menuOverlay = document.getElementById("menuOverlay");
+
+
+        // Detecta a rolagem
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 50) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+
+        });
+
+
+        // Abrir menu
+        menuButton.addEventListener("click", () => {
+
+            sideMenu.classList.add("active");
+            menuOverlay.classList.add("active");
+
+        });
+
+
+        // Fechar menu
+        closeMenu.addEventListener("click", () => {
+
+            sideMenu.classList.remove("active");
+            menuOverlay.classList.remove("active");
+
+        });
+
+
+        // Fechar clicando no fundo
+        menuOverlay.addEventListener("click", () => {
+
+            sideMenu.classList.remove("active");
+            menuOverlay.classList.remove("active");
+
+        });
+
+
+        // Fechar ao clicar em um link
+        document.querySelectorAll(".side-menu a").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                sideMenu.classList.remove("active");
+                menuOverlay.classList.remove("active");
+
+            });
+
+        });
+
+
+
+        const searchInput = document.getElementById("searchInput");
+        const filterButtons = document.querySelectorAll(".filter");
+        const courseCards = document.querySelectorAll(".course-card");
+
+        let selectedCategory = "Todos";
+
+        // Remove acentos e transforma tudo em minúsculo
+        function normalizeText(text) {
+            return text
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "");
+        }
+
+        function filterCourses() {
+
+            const searchText = normalizeText(searchInput.value.trim());
+
+            courseCards.forEach(course => {
+
+                const title = normalizeText(
+                    course.querySelector("h3").textContent
+                );
+
+                const description = normalizeText(
+                    course.querySelector("p").textContent
+                );
+
+                const category = normalizeText(course.dataset.category);
+
+                const selectedCat = normalizeText(selectedCategory);
+
+                // Verifica a pesquisa
+                const matchesSearch =
+                    title.includes(searchText) ||
+                    description.includes(searchText);
+
+                // Verifica a categoria
+                const matchesCategory =
+                    selectedCategory === "Todos" ||
+                    category === selectedCat;
+
+                // Mostra ou esconde
+                if (matchesSearch && matchesCategory) {
+                    course.style.display = "flex";
+                } else {
+                    course.style.display = "none";
+                }
+
+            });
+        }
+
+
+        // Pesquisa enquanto digita
+        searchInput.addEventListener("input", filterCourses);
+
+
+        // Botões de categoria
+        filterButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                filterButtons.forEach(btn => {
+                    btn.classList.remove("active");
+                });
+
+                button.classList.add("active");
+
+                selectedCategory = button.dataset.category;
+
+                filterCourses();
+
+            });
+
+        });
+
+
+        lucide.createIcons();
+    </script>
+
+</body>
+
+</html>
